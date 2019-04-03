@@ -1,0 +1,37 @@
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  background: $red;
+  border-radius: 10px;
+  color: $white;
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 20px;
+  line-height: 1;
+  padding: 13px 35px 3px;
+  transition: opacity .15s ease-in-out;
+  &:hover {
+    opacity: .8;
+  }
+}
+.btn-scondary {
+  background: $violet;
+}
+.btns-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px;
+  li {
+    flex: 0 0 calc(20% - 20px);
+    margin: 0 10px;
+  }
+  .btn {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+

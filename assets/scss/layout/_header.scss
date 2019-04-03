@@ -1,0 +1,239 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  // @include breakpoint(tablet) {
+  //   background: none;
+  //   padding: 35px 40px;
+  //   .product-page & {
+  //     padding-bottom: 70px;
+  //   }
+  // }
+  h1 {
+    margin-top: 150px;
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 24px;
+    margin: 20px 0 0;
+  }
+  &::after {
+    background: $dark-blue;
+    content: "";
+    height: 100%;
+    left: 50vw;
+    position: absolute;
+    width: 50vw;
+    top: 0;
+  }
+  .layout-wrapper {
+    position: relative;
+    padding: 35px 20px 440px;
+    &::before {
+      background: $white;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 60%;
+      top: 0;
+      z-index: 3;
+    }
+    &::after {
+      background: url("../../images/layout/krkrb-main.svg") no-repeat 0 0;
+      background-size: 100%;
+      content: "";
+      height: 574px;
+      left: 51%;
+      position: absolute;
+      width: 739px;
+      top: 60px;
+      z-index: 3;
+    }
+  }
+}
+.brand {
+  background: url("../../images/layout/krkrb.svg") no-repeat 0 0;
+  background-size: contain;
+  display: block;
+  height: 33px;
+  margin-right: 25px;
+  text-indent: -999em;
+  width: 150px;
+  position: relative;
+  z-index: 4;
+}
+.page-nav {
+  background: $dark-blue;
+  display: none;
+  line-height: 1;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 50px 17%;
+  z-index: 100;
+  overflow: auto;
+  &.mobile-menu-show {
+    @include breakpoint(tablet) {
+      transform: none;
+    }
+  }
+  //@include breakpoint(tablet) {
+    background: none;
+    display: block;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-right: -20px;
+    position: static;
+    padding: 0;
+    height: auto;
+    width: auto;
+    overflow: visible;
+  //}
+  ul {
+    li {
+      margin: 0 5px;
+    }
+    a {
+      color: $white;
+      display: block;
+      position: relative;
+      padding: 10px 0;
+      transition: all .3s ease-in-out;
+      &:hover {
+        opacity: .7;
+      }
+      //@include breakpoint(tablet) {
+        color: $violet;
+        padding: 0 15px;
+        &:hover {
+          opacity: 1;
+        }
+      //}
+      //@include breakpoint(tablet) {
+        &::after {
+          top: 100%;
+          background: $violet;
+          content: "";
+          display: block;
+          height: 2px;
+          width: calc(100% - 30px);
+          position: absolute;
+          transform: scale(0, 1);
+          transition: all .3s ease-in-out;
+          transform-origin: left;
+        }
+        &:hover::after {
+          transform: scale(1, 1);
+        }
+      //}
+    }
+    //@include breakpoint(tablet) {
+      .active {
+        &::after {
+          transform: scale(1, 1);
+        }
+      }
+      &:hover {
+        .active:not(.product-active) {
+          &::after {
+            transform: scale(0, 1);
+          }
+          &:hover::after {
+            transform: scale(1, 1);
+          }
+        }
+        .product-active {
+          &::after {
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  //}
+}
+.page-nav-mobile {
+  display: block;
+  opacity: 0.7;
+  transform: translateX(100%);
+  transition: all 0.2s;
+}
+.mobile-menu-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.page-nav__primary {
+  margin-bottom: 25px;
+  //@include breakpoint(tablet) {
+    display: flex;
+    margin-bottom: 0;
+  //}
+}
+.mobile-menu, .close {
+  display: block;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  right: 20px;
+  top: 38px;
+  z-index: 1;
+  .menu-icon {
+    background-color: $dark-blue;
+    border: 0;
+    display: block;
+    color: transparent;
+    font-size: 0;
+    height: 2px;
+    margin: 8px 0;
+    position: relative;
+    text-shadow: none;
+    width: 30px;
+    &::before, &::after {
+      background-color: $dark-blue;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 30px;
+    }
+    &::before {
+      bottom: 8px;
+    }
+    &::after {
+      top: 8px;
+    }
+  }
+  //@include breakpoint(tablet) {
+    display: none;
+  //}
+}
+.close {
+  margin: 0;
+  .menu-icon {
+    background-color: transparent;
+    &::before, &::after {
+      background-color: $white;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 30px;
+    }
+    &::before {
+      transform: translate3d(0, 8px, 0px) rotate3d(0, 0, 1, 45deg);
+    }
+    &::after {
+      transform: translate3d(0, -8px, 0px) rotate3d(0, 0, 1, -45deg);
+    }
+  }
+}
+.bottom-header {
+  max-width: 60%;
+  position: relative;
+  z-index: 4;
+}

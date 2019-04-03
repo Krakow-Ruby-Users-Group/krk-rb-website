@@ -1,0 +1,29 @@
+// Flex Layout
+.flex-col-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.flex-col-layout--4 {
+  .col {
+    flex: 0 0 calc(25% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.flex-col-layout--3 {
+  .col {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.flex-col-layout--2 {
+  .col {
+    flex: 0 0 calc(50% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

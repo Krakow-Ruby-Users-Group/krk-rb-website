@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  background: $white;
+  color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  font: $default-font-wight $default-font-size $default-font-family;
+  line-height: $default-line-height;
+  min-height: 100vh;
+  padding: 0;
+}
+a {
+  color: $dark-blue;
+  transition: color .1s ease-in-out;
+  &:hover {
+    text-decoration: none;
+  }
+}
+h1, h2, h3, h4, strong {
+  font-weight: $default-font-wight;
+  line-height: $default-line-height;
+  margin: 0;
+}
+h1 {
+  font-size: $primary-header-font-size;
+}
+h2 {
+  font-size: $secondary-font-size;
+  margin-top: 70px;
+}
+ul, ol {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.primary-font {
+  font-family: $default-font-family;
+}
+.secondary-font {
+  font-family: $secondary-font-family;
+}
+.secondary-color {
+  color: $red;
+}
+.layout-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  //width: 100%;
+}
+
