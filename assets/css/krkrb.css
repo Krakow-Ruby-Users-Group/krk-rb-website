@@ -391,15 +391,27 @@ ul {
 }
 
 .btns-list li {
-  -ms-flex: 0 0 calc(20% - 20px);
-  flex: 0 0 calc(20% - 20px);
-  margin: 0 10px
+  -ms-flex: 0 0 calc(20% - 10px);
+  flex: 0 0 calc(20% - 10px);
+  margin: 0 10px;
+  margin-bottom: 20px;
 }
 
 .btns-list .btn {
   margin-top: 0;
   width: 100%;
-  text-align: center
+  text-align: center;
+}
+
+.btns-list a {
+  height: 150px;
+}
+
+.btns-list img {
+  max-width: 300px;
+  border: 10px solid #afbdff;
+  border-radius: 15px;
+  padding: 5px;
 }
 
 .tickets {
