@@ -409,6 +409,7 @@ ul {
 
 .btns-list img {
   max-width: 300px;
+  min-width: 300px;
   border: 10px solid #afbdff;
   border-radius: 15px;
   padding: 5px;
