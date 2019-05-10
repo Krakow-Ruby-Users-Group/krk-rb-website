@@ -406,12 +406,9 @@ ul {
 .btns-list a {
   min-height: 87px;
   display: block;
-  border: 1px solid red;
   height: 120px;
   max-width: 300px;
   min-width: 300px;
-  border: 10px solid #afbdff;
-  border-radius: 15px;
   text-align: center;
   padding: 5px;
   display: table-cell;
